@@ -1,0 +1,368 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  min-height: 100vh;
+  margin: 0;
+
+  background-image: url("https://i.pinimg.com/736x/d8/d1/f8/d8d1f89a1dda4422b078da852211e942.jpg");
+
+  background-size: contain;     
+  background-position: center;
+  background-repeat: repeat;
+  background-color: black;   
+  object-fit: cover;  
+  height: 100vh;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: #389182;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* HEADER TEXT */
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  display: inline;
+}
+
+/* CART BUTTON */
+.trolly {
+  background: rgb(24, 107, 86);
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  top: 15px;
+}
+
+/* hover fix */
+.trolly:hover {
+  background-color: #195254;
+  transform: scale(1.1);
+  transition: .4s;
+}
+
+/* TOTAL BUTTON */
+.tmaount {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  background: #7ad4dc;
+  color: rgb(141, 79, 28);
+  border: none;
+  border-radius: 8px;
+  height: 90%;
+  width: 100px;
+  font-size: 15px;
+}
+
+/* REMOVE CONTAINER */
+.rmvcontener {
+  position: absolute;
+  right: 120px;
+  bottom: 5px;
+  background: #7ad4dc;
+  color: white;
+  border-radius: 8px;
+  height: 90%;
+  width: 100px;
+}
+
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 60px;
+  height: 35%;
+  position: relative;
+  top: 8px;
+}
+
+.remove-btn:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+/* CARDS */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background: white;
+  width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  opacity: .8;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  color: #444;
+}
+
+/* BUTTON */
+.card button {
+  width: 100%;
+  padding: 8px;
+  background: #2c7a7b;
+  color: white;
+  border: none;
+  margin-top: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #195254;
+}
+
+/* CART SIDEBAR */
+.cart {
+  position: fixed;
+  right: -300px;
+  top: 70px;
+  width: 160px;
+  height: 80%;
+  background: rgb(219, 208, 208);
+  padding: 15px;
+  transition: 0.3s;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  overflow-y: auto;
+}
+
+/*cart remove X*/
+.close-cart {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  background-color: rgb(255, 1, 1);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 40%;
+}
+
+.close-cart:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.cart.active {
+  right: 0;
+}
+
+/* CART LIST */
+.cart ul {
+  padding: 0;
+}
+
+.cart li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* REMOVE BUTTON INSIDE CART */
+.cart button {
+  background: rgb(219, 208, 208);
+  color: black;
+  border: none;
+  padding: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 17px;
+}
+
+/* ORDER BUTTON */
+.order-btn {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgb(237, 225, 225);
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* CART TOTAL */
+.cart h3 {
+  margin-top: 10px;
+  color: #2c7a7b;
+}
+
+/* KITCHEN IMAGE */
+.kitchen{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+.kitchen img {
+  width: 75vw;
+  max-width: 750px;
+  aspect-ratio: 1 / 1;
+  margin: 70px auto 0;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/* BOXES FIXED ONLY */
+.box1, .box2 {
+  width: 38%;
+  min-width: 280px;
+
+  height: 150px;
+
+  background-color: #fff;
+  color: #583232;
+
+  text-align: center;
+  border-radius: 10px 2px 10px 30px;
+
+  opacity: 0.7;
+  padding: 10px;
+
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+.box1:hover{
+  opacity: .8;
+  transform: scale(1.05);
+}
+.box2:hover{
+  opacity: .9;
+  transform: scale(1.05);
+}
+
+/* ORDER CONFIRM */
+.order-confirmation {
+  margin: 40px auto;
+  width: 80%;
+  background-color: rgb(210, 160, 10);
+  color: #080808;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  opacity: .8;
+  font-size: larger;
+  transition: 0.5s;
+}
+.order-confirmation:hover{
+  transform: scale(1.025);
+  opacity: .9;
+  background-color: rgb(255, 191, 0);
+}
+
+/* PROJECT SECTION */
+.project-section {
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+.left {
+  background-color: rgb(226, 226, 226);
+  width: 35%;
+  margin-left: 5%;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: .7;
+}
+.left:hover{
+  opacity: .8;
+  font-weight: 530;
+}
+
+.right {
+  background-color: rgb(226, 226, 226);
+  width: 35%;
+  margin-left: 60%;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: .7;
+}
+.right:hover{
+  opacity: .8;
+  font-weight: 530;
+}
+
+
+
+
+/* BOTTOM LINE */
+.bottom-line {
+  border: 5px solid #120404;
+  margin-top: 30px;
+  opacity: 0;
+}

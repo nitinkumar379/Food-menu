@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food App</title>
+  <link rel="stylesheet" href="homepg.css">
+</head>
+<body>
+
+<header class="header" id="mainHeader">
+  <h1>🍔 Food Menu</h1>
+
+  <div class="tmaount">
+    <p>Total ₹</p><span id="total-header">0</span>
+  </div>
+
+  <div class="rmvcontener">
+    <button class="remove-btn" onclick="clearCart()">Remove</button>
+    <button class="trolly" onclick="toggleCart()">🛒 <span id="count">0</span></button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://www.image2url.com/r2/default/images/1778000680802-693acfa9-5351-4122-a023-b2ff9ec25df0.jpeg" alt="pizza">
+    <h3>Pizza</h3>
+    <p>Price: ₹200</p>
+    <button onclick="addToCart('Pizza', 200)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://www.image2url.com/r2/default/images/1778000742094-749fcf42-80f6-4eab-80db-40537278b177.avif" alt="burger">
+    <h3>Burger</h3>
+    <p>Price: ₹120</p>
+    <button onclick="addToCart('Burger', 120)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://www.image2url.com/r2/default/images/1778000870640-148ed380-18f7-4867-b90a-15cb909ae40b.jpg" alt="Biryani">
+    <h3>Biryani</h3>
+    <p>Price: ₹250</p>
+    <button onclick="addToCart('Biryani', 250)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://www.image2url.com/r2/default/images/1778000917548-9fce2702-fd46-43b2-9bfb-1d919d5afa48.jpg" alt="samosa">
+    <h3>Samosa</h3>
+    <p>Price: ₹20</p>
+    <button onclick="addToCart('Samosa', 20)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://pleasant-peach-ynjqfrzqig.edgeone.app/drink.jpg" alt="soft-drink">
+    <h3>Soft Drink</h3>
+    <p>Price: ₹50</p>
+    <button onclick="addToCart('Soft Drink', 50)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://sleepy-sapphire-7bwneswdhj.edgeone.app/momo.jpeg" alt="momos">
+    <h3>Momo's</h3>
+    <p>Price: ₹60</p>
+    <button onclick="addToCart('Momo', 60)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://difficult-black-uzj66jitn3.edgeone.app/lassi.jpeg" alt="lassi">
+    <h3>Lassi</h3>
+    <p>Price: ₹80</p>
+    <button onclick="addToCart('Lassi', 80)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://hon-bronze-66slrdlcya.edgeone.app/bananashake.jpg" alt="bana-shake">
+    <h3>Banana Shake</h3>
+    <p>Price: ₹60</p>
+    <button onclick="addToCart('Banana Shake', 60)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://junior-violet-obmfy3xpmu.edgeone.app/icecream.jpeg" alt="ice-cream">
+    <h3>Ice Cream</h3>
+    <p>Price: ₹120</p>
+    <button onclick="addToCart('Ice Cream', 120)">Select</button>
+  </div>
+
+  <div class="card">
+    <img src="https://conservation-silver-y8cyrhvhsz.edgeone.app/chowmein.jpg" alt="chawmine">
+    <h3>chowmein</h3>
+    <p>Price: ₹60</p>
+    <button onclick="addToCart('chowmein', 60)">Select</button>
+
+</div>
+
+<div class="kitchen">
+  <img src="https://vitreous-maroon-1v9nj4hiih.edgeone.app/kitchen2.jpeg" alt="kitchen-image">
+</div>
+
+<!-- CART -->
+<div class="cart" id="cart">
+  <span class="close-cart" onclick="toggleCart()">✖</span>
+  <h2>Your Cart</h2>
+
+  <ul id="cart-items"></ul>
+
+  <h3>Total ₹<span id="total">0</span></h3>
+
+  <span onclick="clearCart()" class="clear-x">Remove</span>
+
+  <button class="order-btn" id="orderBtn" onclick="placeOrder()">Order Now</button>
+</div>
+<!--cart end-->
+
+<div class="container">
+  <div class="box1">
+    <h3>Delivery Available</h3>
+    <p>Only for Aligarh</p>
+  </div>
+
+  <div class="box2">
+    <h3>Delivery Available</h3>
+    <p>Only for Aligarh</p>
+  </div>
+</div>
+
+<div class="order-confirmation">
+  <p>Thank you for your order! We truly appreciate your trust in us.</p>
+  <p>Your delicious meal is being prepared with care.</p>
+  <p>Your order will reach you within 15 minutes.</p>
+  <p>We hope you enjoy your food and have a great experience.</p>
+</div>
+
+<div class="project-section">
+
+  <p class="left">This is a Food Delivery Web Application designed to provide a fast, simple, and user-friendly online ordering experience.</p>
+
+  <p class="right">Users can easily browse through a variety of food items and select their favorite dishes from the menu.</p>
+
+  <p class="left">The application ensures smooth navigation and a clean interface for better user experience.</p>
+
+  <p class="right">Orders are placed quickly and processed efficiently to ensure timely delivery.</p>
+
+  <p class="left">The design is fully responsive and works seamlessly on mobile, tablet, and desktop devices.</p>
+
+  <p class="right">The main focus of this project is to make food ordering easy, fast, and convenient for users.</p>
+
+  <p class="left">It provides a hassle-free experience from selecting food to placing the order.</p>
+
+  <p class="right">This project demonstrates basic front-end development skills using HTML, CSS, and responsive design concepts.</p>
+
+</div>
+
+<div class="bottom-line"></div>
+<script src="script.js"></script>
+
+</body>
+</html>
